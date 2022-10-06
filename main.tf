@@ -112,8 +112,8 @@ resource "azurerm_virtual_machine" "catapp" {
   delete_os_disk_on_termination = "true"
 
   tags = {
-    department = "devops"
-  billable = "true"
+    Department = "devops"
+  Billable = "true"
   }
   
 
