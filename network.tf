@@ -1,7 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_resource_group" "vknetwork" {
   name     = "my-resources"
   location = "West Europe"
@@ -19,11 +15,3 @@ module "network" {
     "subnet2" : ["Microsoft.Sql"],
     "subnet3" : ["Microsoft.Sql"]
   }
-
-  tags = {
-    environment = "dev"
-    costcenter  = "it"
-  }
-
-  depends_on = [azurerm_resource_group.example]
-}
