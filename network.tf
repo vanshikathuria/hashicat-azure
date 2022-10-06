@@ -15,3 +15,12 @@ module "network" {
     "subnet2" : ["Microsoft.Sql"],
     "subnet3" : ["Microsoft.Sql"]
   }
+
+
+  tags = {
+    environment = "dev"
+    costcenter  = "it"
+  }
+
+  depends_on = [azurerm_resource_group.vknetwork]
+}
